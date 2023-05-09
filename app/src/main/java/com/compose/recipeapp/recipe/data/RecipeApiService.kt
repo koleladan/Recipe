@@ -1,6 +1,6 @@
 package com.compose.recipeapp.recipe.data
 
-import com.compose.recipeapp.recipe.data.remote.dto.ResultDto
+import com.compose.recipeapp.recipe.data.remote.dto.ResultsDto
 import com.compose.recipeapp.recipe.data.remote.dto.RecipeDto
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -13,12 +13,16 @@ interface RecipeApiService {
         @Query("page") page: Int,
         @Query("query") query: String
 
-    ): RecipeDto
+    ): List<RecipeDto>
 
     @GET("get")
     suspend fun getRecipeDetails(
         @Header("Authorization") token: String,
         @Query("id") id: Int
 
-    ):ResultDto
+    ):ResultsDto
+
+    companion object {
+        const val BASE_URL = "https://food2fork.ca/api/recipe/"
+    }
 }

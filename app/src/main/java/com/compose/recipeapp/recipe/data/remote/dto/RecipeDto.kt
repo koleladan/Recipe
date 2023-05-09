@@ -6,7 +6,7 @@ data class RecipeDto(
     val count: Int,
     val next: String,
     val previous: String,
-    val results: List<ResultDto>
+    val results: List<ResultsDto>
 )
 fun RecipeDto.toRecipe(): Recipe{
     return Recipe(

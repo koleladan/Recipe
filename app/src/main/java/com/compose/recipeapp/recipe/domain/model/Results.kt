@@ -2,7 +2,7 @@ package com.compose.recipeapp.recipe.domain.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Result(
+data class Results(
 
     @SerializedName("cooking_instructions")
     val cooking_instructions: String? = null,

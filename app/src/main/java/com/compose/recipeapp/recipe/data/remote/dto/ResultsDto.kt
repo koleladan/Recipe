@@ -1,9 +1,8 @@
 package com.compose.recipeapp.recipe.data.remote.dto
 
-import com.compose.recipeapp.recipe.domain.model.Result
-import com.google.gson.annotations.SerializedName
+import com.compose.recipeapp.recipe.domain.model.Results
 
-data class ResultDto(
+data class ResultsDto(
     val cooking_instructions: String,
     val date_added: String,
     val date_updated: String,
@@ -18,8 +17,8 @@ data class ResultDto(
     val source_url: String,
     val title: String
 ) {
-    fun toResult(): Result {
-        return Result(
+    fun toResults(): Results {
+        return Results(
             cooking_instructions = cooking_instructions,
             date_added = date_added,
             date_updated = date_updated,
