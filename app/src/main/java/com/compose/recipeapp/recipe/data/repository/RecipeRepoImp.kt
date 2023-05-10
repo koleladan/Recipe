@@ -9,7 +9,7 @@ import javax.inject.Inject
 class RecipeRepoImp @Inject constructor(
     private val recipeApiService: RecipeApiService
 ): RecipeRepo {
-    override suspend fun getRecipe(token: String, page: Int, query: String): List<RecipeDto> {
+    override suspend fun getRecipe(token: String, page: Int.Companion, query: String): List<RecipeDto> {
         return recipeApiService.getRecipe(token, page, query)
     }
 

@@ -13,6 +13,6 @@ fun RecipeDto.toRecipe(): Recipe{
         count = count,
         next = next,
         previous = previous,
-        results = results.map {it.toResult()}
+        results = results.map { it.toResults() }
     )
 }
