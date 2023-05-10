@@ -10,7 +10,7 @@ interface RecipeApiService {
     @GET("search")
     suspend fun getRecipe(
         @Header("Authorization") token:String,
-        @Query("page") page: Int,
+        @Query("page") page: Int.Companion,
         @Query("query") query: String
 
     ): List<RecipeDto>

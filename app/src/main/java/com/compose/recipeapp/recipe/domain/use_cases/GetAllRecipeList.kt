@@ -15,7 +15,7 @@ class GetAllRecipeList @Inject constructor(
 ) {
     operator fun invoke(
         token: String,
-        page: Int,
+        page: Int.Companion,
         query: String
     ): Flow<Resource<List<Recipe>>> = flow {
         try {

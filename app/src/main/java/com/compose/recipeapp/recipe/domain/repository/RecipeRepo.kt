@@ -6,7 +6,7 @@ import com.compose.recipeapp.recipe.data.remote.dto.ResultsDto
 interface RecipeRepo {
     suspend fun getRecipe(
         token: String,
-        page: Int,
+        page: Int.Companion,
         query: String
     ): List<RecipeDto>
 
